@@ -31,4 +31,7 @@ sudo apt-get update
 sudo apt-get install -y docker-ce
 sudo usermod -aG docker $USER
 
+#Fix hmr
+echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+
 
