@@ -35,3 +35,9 @@ sudo usermod -aG docker $USER
 echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 
 
+# Add templates
+touch ~/Templates/Untitled.txt
+touch ~/Templates/script.sh
+touch ~/Templates/file
+echo "#!/bin/bash" > ~/Templates/script.sh
+sudo chmod 0755 ~/Templates/script.sh
